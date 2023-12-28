@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.GestionPlatosPage"
+             Title="GestionPlatosPage">
+    <Grid RowDefinitions="*,Auto" ColumnDefinitions="*,*,*" ColumnSpacing="5">
+        <TableView Intent="Data" Grid.Row="0" Grid.ColumnSpan="3">
+            <TableRoot>
+                <TableSection Title="Acciones a realizar">
+                    <EntryCell Placeholder="Introduzca nombre de plato" Text="{Binding Path=plato.Nombre}"/>
+                    <EntryCell Placeholder="Introduzca Costo de plato" Text="{Binding Path=plato.Costo}"/>
+                    <EntryCell Placeholder="Introduzca Ingredientes del plato" Text="{Binding Path=plato.Ingredientes}"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button Text="Guardar" Clicked="OnGuardarClic" Grid.Row="1" Grid.Column="0" Margin="20,5"/>
+        <Button Text="Eliminar" Clicked="OnEliminarClic" Grid.Row="1" Grid.Column="1" Margin="0,5"/>
+        <Button Text="Cancelar" Clicked="OnCancelarClic" Grid.Row="1" Grid.Column="2" Margin="20,5"/>
+    </Grid>
+</ContentPage>
